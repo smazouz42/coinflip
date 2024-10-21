@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
-import fluid, { extract } from 'fluid-tailwind'
+import fluid, { extract, fontSize, screens } from 'fluid-tailwind'
+
 
 const config: Config = {
     darkMode: ["class"],
@@ -13,7 +14,10 @@ const config: Config = {
 			extract
 		},
   theme: {
+		screens,
+    fontSize,
   	extend: {
+
 		
 		fontSize: {
 			  '10xl': '10rem',
