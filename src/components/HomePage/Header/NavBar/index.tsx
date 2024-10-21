@@ -22,16 +22,15 @@ const NavBarItem = () => (
     </div>
 );
 
-const MobileMenu = ({ open, toggleOpen }: { open: boolean, toggleOpen: () => void }) => (
-    open ? (
-        <div className="absolute top-0 h-screen right-0 bg-gray-700 w-2/3 flex flex-col justify-between">
+const MobileMenu = ({toggleOpen }: {toggleOpen: () => void }) => (
+        <div className="absolute top-0 h-screen right-0 bg-gray-700 w-2/3 flex flex-col">
             <div className="flex justify-end p-4">
                 <Button className="w-10 h-10 bg-transparent text-white" onClick={toggleOpen}>
                     <X />
                 </Button>
             </div>
-            <div className="flex flex-col items-center justify-center flex-grow">
-                <ul className="flex flex-col text-white text-md w-full">
+            <div className="flex">
+                <ul className="text-white text-md w-full">
                     {NAV_ITEMS.map((item, index) => (
                         <li
                             key={item}
@@ -42,14 +41,13 @@ const MobileMenu = ({ open, toggleOpen }: { open: boolean, toggleOpen: () => voi
                     ))}
                 </ul>
             </div>
-            <div className="flex gap-3 w-full p-4">
+            <div className="flex gap-3 w-full items-end  grow px-4 py-2 ">
                 <Button className="text-white">Sign in</Button>
                 <Button className="rounded-lg bg-gradient-to-r from-[#933FFE] to-[#18C8F0] px-4 py-2 text-white">
                     Sign up
                 </Button>
             </div>
         </div>
-    ) : null
 );
 
 const NavBar = () => {
@@ -63,7 +61,7 @@ const NavBar = () => {
                 <Button className="w-10 h-10 bg-none" onClick={toggleOpen}>
                     <AlignJustify />
                 </Button>
-                <MobileMenu open={open} toggleOpen={toggleOpen} />
+                {open && <MobileMenu toggleOpen={toggleOpen} /> }
             </div>
         </>
     );
