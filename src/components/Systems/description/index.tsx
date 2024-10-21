@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import { cva, type VariantProps } from "class-variance-authority"
 import React from 'react'
-const descriptionStyles = cva('text-gray-400 text-lg max-w-2xl', {
+const descriptionStyles = cva('text-gray-400 ~text-sm/lg ~max-w-xl/2xl', {
   variants: {
     position: {
       center: 'text-center',
