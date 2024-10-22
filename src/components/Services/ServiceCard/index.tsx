@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 export function ServiceCard({ title, description, logo, buttonText }) {
     return (
-        <Card className="lg:w-[400px] max-w-[600px] bg-gray-900  border-none rounded-3xl">
+        <Card className="lg:w-[400px] w-[350px] bg-gray-900  border-none rounded-3xl">
             <CardHeader className="flex items-center justify-center">
                 <CardTitle>
                     <Image

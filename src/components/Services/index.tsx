@@ -1,7 +1,9 @@
-'use client'
+'use client';
 import { useState } from "react";
 import Image from "next/image";
 import { ServiceCard } from "./ServiceCard";
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; 
+import { motion } from 'framer-motion';
 
 const servicesData = [
     {
@@ -26,12 +28,34 @@ const servicesData = [
 
 const Services = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(1);
+
+    const variants = {
+        enter: (direction: number) => {
+            return {
+                x: direction > 0 ? 1000 : -1000,
+                opacity: 0
+            };
+        },
+        center: {
+            x: 0,
+            opacity: 1
+        },
+        exit: (direction: number) => {
+            return {
+                x: direction < 0 ? 1000 : -1000,
+                opacity: 0
+            };
+        }
+    };
 
     const handlePrev = () => {
+        setDirection(-1);
         setCurrentIndex((prevIndex) => (prevIndex - 1 + servicesData.length) % servicesData.length);
     };
 
     const handleNext = () => {
+        
         setCurrentIndex((prevIndex) => (prevIndex + 1) % servicesData.length);
     };
 
@@ -44,7 +68,7 @@ const Services = () => {
                 height={546}
                 className="w-full absolute"
             />
-             <div className="lg:flex gap-4 w-full justify-center hidden ">
+            <div className="lg:flex gap-4 w-full justify-center hidden px-4">
                 {servicesData.map((service, index) => (
                     <ServiceCard
                         key={index}
@@ -56,7 +80,20 @@ const Services = () => {
                 ))}
             </div>
 
-            <div className="flex gap-4 w-full justify-center lg:hidden">
+            <div className="relative flex gap-4 w-full justify-center lg:hidden items-center">
+                <button 
+                    className="absolute left-4 p-2 bg-gray-800 text-white rounded-full"
+                    onClick={handlePrev}
+                >
+                    <FaArrowLeft />
+                </button>
+                <motion.div
+                                                variants={variants}
+                                                initial="enter"
+                                                animate="center"
+                                                exit="exit"
+                                                transition={{ duration: 0.5 }}
+                >
                 <ServiceCard
                     key={currentIndex}
                     title={servicesData[currentIndex].title}
@@ -64,8 +101,15 @@ const Services = () => {
                     logo={servicesData[currentIndex].imageUrl}
                     buttonText={servicesData[currentIndex].buttonText}
                 />
+                </motion.div>
+
+                <button 
+                    className="absolute right-4 p-2 bg-gray-800 text-white rounded-full"
+                    onClick={handleNext}
+                >
+                    <FaArrowRight />
+                </button>
             </div>
-            {/* <Button onClick */}
         </section>
     );
 };
