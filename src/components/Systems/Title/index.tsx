@@ -4,13 +4,15 @@ import React from 'react'
 const titlerStyles = cva('text-white', {
   variants: {
     size: {
-      sm: 'text-4xl',
-      lg: '~text-4xl/9xl text-center',
+      sm: '~text-lg/6xl',
+      lg: '~text-4xl/9xl',
+
     },
     maxWidth: {
-      sm: 'max-w-3xl',
+      sm: '~max-w-md/xl',
       lg: '~max-w-xl/6xl',
     }
+
   },
   defaultVariants: {
     size: 'lg',
@@ -18,9 +20,9 @@ const titlerStyles = cva('text-white', {
 })
 type DivProps = React.HTMLAttributes<HTMLDivElement>
 export type titlerProps = DivProps & VariantProps<typeof titlerStyles>
-const Title = ({ content, maxWidth ,size }: titlerProps) => {
+const Title = ({ content, maxWidth ,size, className }: titlerProps) => {
   return (
-    <h1 className={cn(titlerStyles({ size, maxWidth }))}>{content}</h1>
+    <h1 className={cn(titlerStyles({ size, maxWidth }), className)}>{content}</h1>
   )
 }
 export { Title }

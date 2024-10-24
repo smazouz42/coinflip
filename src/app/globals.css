@@ -7,6 +7,17 @@ body {
   background-color: #171717;
 }
 
+
+.red{
+  @apply border border-red-600
+}
+.blue{
+  @apply border border-blue-600
+}
+.green{
+  @apply border border-green-600
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

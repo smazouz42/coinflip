@@ -7,6 +7,7 @@ const buttonStyles = cva('text-white', {
     variant: {
       default: 'border rounded-lg px-2 py-2 w-fit ',
       gradient: 'rounded-lg bg-gradient-to-r from-[#933FFE] to-[#18C8F0] px-4 py-2 w-fit',
+      iconButton: 'items-center space-x-2 p-0 text-lg text-purple-800'
     }
   },
   defaultVariants: {
@@ -16,9 +17,9 @@ const buttonStyles = cva('text-white', {
 
 type DivProps = React.HTMLAttributes<HTMLDivElement>
 export type buttoneProps = DivProps & VariantProps<typeof buttonStyles>
-const Button = ({ content, variant}: buttoneProps) => {
+const Button = ({ children, variant}: buttoneProps) => {
   return (
-    <ShadcnButton className={cn(buttonStyles({ variant }), 'text-white')}>{content}</ShadcnButton>
+    <ShadcnButton className={cn(buttonStyles({ variant }), 'text-white')}>{children}</ShadcnButton>
   )
 }
 export { Button }

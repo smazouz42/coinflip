@@ -10,7 +10,7 @@ const descriptionStyles = cva('text-gray-400 ~text-sm/lg ~max-w-xl/2xl', {
     
   },
   defaultVariants: {
-    position: 'center',
+    position: 'right',
   },
 })
 type DivProps = React.HTMLAttributes<HTMLDivElement>
