@@ -2,6 +2,7 @@ import { Homepage } from "../components/HomePage"
 import { About } from "../components/About"
 import { Services } from "../components/Services"
 import { State } from "@/components/States";
+import { Footer } from "@/components/Footer";
 
 export default function Page() {
   return (
@@ -10,6 +11,7 @@ export default function Page() {
       <About />
       <Services/>
       <State />
+      <Footer />
     </>
   );
 }

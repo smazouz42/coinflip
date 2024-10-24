@@ -1,6 +1,7 @@
 'use client';
+
 import { useState } from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { ServiceCard } from "./AboutCard";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -41,7 +42,7 @@ const About = () => {
     };
 
     const variants = {
-        enter: (direction: number) => ({
+        enter: (direction) => ({
             x: direction > 0 ? 300 : -300,
             opacity: 0,
         }),
@@ -53,11 +54,10 @@ const About = () => {
                 opacity: { duration: 0.2 },
             },
         },
-        
     };
 
     return (
-        <section className="aspect-[2.63] relative flex flex-col justify-center items-center h-full bg-red-500">
+        <section className="container mx-auto aspect-[2.63] relative flex flex-col justify-center items-center h-full">
             <Image
                 src="/images/background-Services.png"
                 alt="Background"
@@ -79,7 +79,7 @@ const About = () => {
 
             <div className="relative flex gap-4 w-full justify-center lg:hidden items-center">
                 <button
-                    className="absolute left-4 p-2 bg-gray-800 text-white rounded-full"
+                    className="p-2 bg-gray-800 text-white rounded-full"
                     onClick={handlePrev}
                 >
                     <FaArrowLeft />
@@ -87,11 +87,10 @@ const About = () => {
 
                 <motion.div
                     key={currentIndex}
-                    className="w-full flex justify-center"
+                    className="flex justify-center"
                     custom={direction}
                     initial="enter"
                     animate="center"
-                    exit="exit"
                     variants={variants}
                 >
                     <ServiceCard
@@ -103,7 +102,7 @@ const About = () => {
                 </motion.div>
 
                 <button
-                    className="absolute right-4 p-2 bg-gray-800 text-white rounded-full"
+                    className="p-2 bg-gray-800 text-white rounded-full"
                     onClick={handleNext}
                 >
                     <FaArrowRight />

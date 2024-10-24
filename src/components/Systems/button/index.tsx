@@ -5,8 +5,8 @@ import { Button as ShadcnButton } from "@/components/ui/button"
 const buttonStyles = cva('text-white', {
   variants: {
     variant: {
-      default: 'border rounded-lg px-2 py-2 w-fit ',
-      gradient: 'rounded-lg bg-gradient-to-r from-[#933FFE] to-[#18C8F0] px-4 py-2 w-fit',
+      default: 'border rounded-lg px-2 py-2 w-fit ~text-xs/lg',
+      gradient: 'rounded-lg bg-gradient-to-r from-[#933FFE] to-[#18C8F0] ~px-1/4 h-fit w-fit ~text-xs/xl',
       iconButton: 'items-center space-x-2 p-0 text-lg text-purple-800'
     }
   },

@@ -9,8 +9,8 @@ const titlerStyles = cva('text-white', {
 
     },
     maxWidth: {
-      sm: '~max-w-md/xl',
-      lg: '~max-w-xl/6xl',
+      sm: '~max-w-xs/2xl',
+      lg: '~max-w-sm/6xl',
     }
 
   },

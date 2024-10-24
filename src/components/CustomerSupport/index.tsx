@@ -5,9 +5,9 @@ import { Title } from "@/components/Systems/Title"
 import Image from "next/image"
 const CustomerSupport = () => {
     return (
-        <div className="flex  items-center w-ful">
-            <div className="w-1/2 ">
-                <Image src="/images/service-logo.png" width={670} height={1143} alt="Crypto visual" />
+        <div className="container mx-auto flex  w-full ">
+            <div className="w-1/2">
+                <Image src="/images/service-logo.png" width={580} height={420} alt="Crypto visual" />
             </div>
             <div className="flex flex-col justify-center ~gap-4/8 w-1/2 ">
                 <Title content="A crypto investment platform that invests in you " size="sm" maxWidth="sm" />
