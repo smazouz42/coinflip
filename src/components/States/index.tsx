@@ -1,5 +1,4 @@
 import { Button } from "@/components/Systems/button";
-import { Description } from "@/components/Systems/description";
 import { Title } from "@/components/Systems/Title";
 import Image from "next/image";
 import Icon from "@/components/icons/Arrow";
@@ -7,7 +6,7 @@ import { CryptointoSection } from "../CryptoIntroSection";
 
 const State = () => {
     return (
-        <div className="relative flex flex-col w-full gap-6">
+        <section className="relative flex flex-col w-full gap-6  ~p-2/20">
             {/* <div className="absolute bottom-0 right-0 w-1/2">
             <Image
                 src="/images/luggage-background.png"
@@ -31,10 +30,7 @@ const State = () => {
                     maxWidth="sm"
                     className="text-center"
                 />
-                <Description
-                    content="Buy and sell 150+ cryptocurrencies with 20+ fiat currencies using bank transfers or your credit/debit card."
-                    position="center"
-                />
+                <p className="text-gray-400 ~text-sm/lg ~max-w-lg/xl text-center">Buy and sell 150+ cryptocurrencies with 20+ fiat currencies using bank transfers or your credit/debit card.</p>
                 <Button variant="iconButton">
                     Learn more <Icon />
                 </Button>
@@ -53,7 +49,7 @@ const State = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

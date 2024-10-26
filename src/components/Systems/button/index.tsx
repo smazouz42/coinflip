@@ -18,6 +18,7 @@ const buttonStyles = cva('text-white', {
 type DivProps = React.HTMLAttributes<HTMLDivElement>
 export type buttoneProps = DivProps & VariantProps<typeof buttonStyles>
 const Button = ({ children, variant}: buttoneProps) => {
+  console.log()
   return (
     <ShadcnButton className={cn(buttonStyles({ variant }), 'text-white')}>{children}</ShadcnButton>
   )

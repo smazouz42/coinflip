@@ -57,7 +57,7 @@ const About = () => {
     };
 
     return (
-        <section className="container mx-auto aspect-[3.4] relative flex flex-col justify-center items-center bg-red-500">
+        <section className="container mx-auto aspect-[3.4] relative flex flex-col justify-center items-center">
             <Image
                 src="/images/background-Services.png"
                 alt="Background"
