@@ -12,7 +12,7 @@ import {
 
 export function ServiceCard({ title, description, logo, buttonText }) {
     return (
-        <Card className="bg-gray-900 border-none rounded-3xl sm:max-w-xs lg:max-w-sm max-w-[15rem] ">
+        <Card className="bg-gray-900 border-none rounded-3xl sm:max-w-sm lg:max-w-md max-w-[15rem] ">
             <CardHeader className="flex items-center justify-center">
                 <CardTitle className="flex justify-center items-center ">
                     <Image
@@ -20,22 +20,25 @@ export function ServiceCard({ title, description, logo, buttonText }) {
                         width={80}
                         height={80}
                         alt="Picture of arrows"
-                        className="object-contain ~w-10/16 ~h-10/16"
+                        className="object-contain ~w-10/24 ~h-10/24"
                     />
                 </CardTitle>
             </CardHeader>
-            <CardContent className="flex flex-col ~gap-0/4 text-center">
-                <h1 className="text-lg  text-white">
+            <CardContent className="flex flex-col ~gap-0/4 text-center px-6">
+                <h1 className="~text-lg/4xl font-semibold  text-white">
                     {title}
                 </h1>
-                <p className="text-gray-500 ~text-xs/lg max-w-xs/sm">
+                <p className="text-gray-500 ~text-xs/lg ">
                     {description}
                 </p>
-                <Button variant="ghost" className="flex items-center space-x-2 p-0  text-purple-800">
-                    <span className="text-purple-600">{buttonText}</span>
+
+            </CardContent>
+            <CardFooter className="flex justify-center ">
+                <Button variant="ghost" className="flex items-center font-semibold text-purple-800">
+                    <span className="text-purple-600 ~text-sm/lg">{buttonText}</span>
                     <FiArrowRight />
                 </Button>
-            </CardContent>
+            </CardFooter>
         </Card>
     );
 }

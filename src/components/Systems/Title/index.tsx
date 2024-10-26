@@ -5,7 +5,7 @@ const titlerStyles = cva('text-white text-center font-bold', {
   variants: {
     size: {
       sm: '~text-lg/6xl',
-      lg: '~text-2xl/9xl',
+      lg: '~text-2xl/9xl ',
 
     },
     maxWidth: {
