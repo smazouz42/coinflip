@@ -5,14 +5,14 @@ import { Input } from "../ui/input"
 const Footer = () => {
     return (
         <section className="container mx-auto flex flex-col gap-20">
-            <div className=" flex justify-end absolute top-0 right-0 w-1/2">
+            {/* <div className=" flex justify-end absolute top-0 right-0 w-1/2">
                 <Image
                     src="/images/services-background.png"
                     width={6000}
                     height={878}
                     alt="Crypto visual"
                 />
-            </div>
+            </div> */}
             <div className="flex flex-col items-center justify-center gap-4 h-full ">
                 <Title content="Receive transmissions" size="sm" maxWidth="sm" className="text-center" />
                 <p className="text-gray-400 ~text-xs/lg ~lg:max-w-2xl text-center">Unsubscribe anytime. <span className="text-white">Privacy Policy</span></p>

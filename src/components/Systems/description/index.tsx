@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import { cva, type VariantProps } from "class-variance-authority"
 import React from 'react'
-const descriptionStyles = cva('text-gray-400 ~text-xs/lg  ~max-w-xl/2xl', {
+const descriptionStyles = cva('text-gray-400 ~text-sm/lg ~max-w-lg/xl', {
   variants: {
     position: {
       center: 'text-center',
@@ -10,7 +10,7 @@ const descriptionStyles = cva('text-gray-400 ~text-xs/lg  ~max-w-xl/2xl', {
     
   },
   defaultVariants: {
-    position: 'right',
+    position: 'center',
   },
 })
 type DivProps = React.HTMLAttributes<HTMLDivElement>

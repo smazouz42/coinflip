@@ -1,15 +1,15 @@
 import { cn } from "@/lib/utils"
 import { cva, type VariantProps } from "class-variance-authority"
 import React from 'react'
-const titlerStyles = cva('text-white', {
+const titlerStyles = cva('text-white text-center font-bold', {
   variants: {
     size: {
       sm: '~text-lg/6xl',
-      lg: '~text-4xl/9xl',
+      lg: '~text-2xl/9xl',
 
     },
     maxWidth: {
-      sm: '~max-w-xs/2xl',
+      sm: '~max-w-xs/4xl',
       lg: '~max-w-sm/6xl',
     }
 

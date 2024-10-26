@@ -6,7 +6,7 @@ import { Title } from "@/components/Systems/Title"
 
 const Homepage = () => {
   return (
-    <section className="aspect-[1.82] relative w-full flex flex-col items-center">
+    <section className="aspect-[1.82] relative w-full flex flex-col items-center border">
       <Image src="/images/background-main.png" alt="background" width={1440} height={700} className="w-full  absolute" />
       <Header />
       <div className="flex flex-col items-center justify-center ~gap-4/8 h-full container">
@@ -15,7 +15,6 @@ const Homepage = () => {
         <Button variant="gradient" > Get Started </Button>
       </div>
     </section>
-
   )
 }
 

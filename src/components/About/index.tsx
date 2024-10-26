@@ -21,7 +21,7 @@ const servicesData = [
     },
     {
         title: "Coin Flip Wallet",
-        description: "Manage your crypto easily with our secure wallet application.",
+        description: "Store your growing investments in ournon-custodial wallet that gives you access to a full suite of DeFi services in one place",
         imageUrl: "/icons/file.png",
         buttonText: "Download the App",
     },
@@ -57,7 +57,7 @@ const About = () => {
     };
 
     return (
-        <section className="container mx-auto aspect-[2.63] relative flex flex-col justify-center items-center h-full">
+        <section className="container mx-auto aspect-[3.4] relative flex flex-col justify-center items-center bg-red-500">
             <Image
                 src="/images/background-Services.png"
                 alt="Background"

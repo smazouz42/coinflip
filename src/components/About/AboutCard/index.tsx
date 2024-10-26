@@ -12,7 +12,7 @@ import {
 
 export function ServiceCard({ title, description, logo, buttonText }) {
     return (
-        <Card className="bg-gray-900 border-none rounded-3xl sm:max-w-xs lg:max-w-sm max-w-[15rem] sm:max-h-xs lg:max-h-sm">
+        <Card className="bg-gray-900 border-none rounded-3xl sm:max-w-xs lg:max-w-sm max-w-[15rem] ">
             <CardHeader className="flex items-center justify-center">
                 <CardTitle className="flex justify-center items-center ">
                     <Image

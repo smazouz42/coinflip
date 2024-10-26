@@ -2,7 +2,7 @@ import { Button } from "@/components/Systems/button";
 import { Description } from "@/components/Systems/description";
 import { Title } from "@/components/Systems/Title";
 import Image from "next/image";
-import Icon from "@/components/icons/arrow";
+import Icon from "@/components/icons/Arrow";
 import { CryptointoSection } from "../CryptoIntroSection";
 
 const State = () => {
