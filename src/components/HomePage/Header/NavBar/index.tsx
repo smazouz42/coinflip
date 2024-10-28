@@ -23,7 +23,7 @@ const NavBarItem = () => (
 );
 
 const MobileMenu = ({toggleOpen }: {toggleOpen: () => void }) => (
-        <div className="absolute top-0 h-screen right-0 bg-gray-700 w-2/3 flex flex-col">
+        <div className="absolute top-0 h-screen right-0 bg-gray-700 w-2/3 flex flex-col rounded-lg" style={{ zIndex: 10 }}>
             <div className="flex justify-end p-4">
                 <Button className="w-10 h-10 bg-transparent text-white" onClick={toggleOpen}>
                     <X />

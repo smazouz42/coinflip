@@ -4,7 +4,7 @@ import { Title } from "@/components/Systems/Title"
 import Image from "next/image"
 const CustomerSupport = () => {
     return (
-        <div className="container mx-auto flex w-full sm:flex-row flex-col p-20 ">
+    <div className="container mx-auto flex w-full sm:flex-row flex-col ~p-8/20 ">
             {/* <Image
                 src="/images/service-logo-bg.png"
                 width={670}
