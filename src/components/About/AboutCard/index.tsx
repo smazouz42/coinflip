@@ -10,7 +10,14 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 
-export function ServiceCard({ title, description, logo, buttonText }) {
+interface ServiceCardProps {
+    title: string;
+    description: string;
+    logo: string;
+    buttonText: string;
+}
+
+export function ServiceCard({ title, description, logo, buttonText }: ServiceCardProps) {
     return (
         <Card className="bg-gray-900 border-none rounded-3xl sm:max-w-sm lg:max-w-md max-w-[15rem] ">
             <CardHeader className="flex items-center justify-center">

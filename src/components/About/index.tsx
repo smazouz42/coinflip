@@ -42,7 +42,7 @@ const About = () => {
     };
 
     const variants = {
-        enter: (direction) => ({
+        enter: (direction : number) => ({
             x: direction > 0 ? 300 : -300,
             opacity: 0,
         }),

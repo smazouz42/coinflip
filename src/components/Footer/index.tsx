@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Title } from "../Systems/Title"
 import { Input } from "../ui/input"
 
