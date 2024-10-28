@@ -6,7 +6,7 @@ import { CryptointoSection } from "../CryptoIntroSection";
 
 const State = () => {
     return (
-        <section className="relative flex flex-col w-full gap-6  ~p-2/20">
+        <section className="relative flex flex-col w-full gap-6 ">
             {/* <div className="absolute bottom-0 right-0 w-1/2">
             <Image
                 src="/images/luggage-background.png"
@@ -23,7 +23,7 @@ const State = () => {
                     alt="Crypto visual"
                 />
             </div>
-            <div className="container mx-auto flex flex-col items-center justify-center gap-8 h-full">
+            <div className="container mx-auto flex flex-col items-center justify-center h-full  pt-20">
                 <Title
                     content="Buy and sell with the lowest fees in the industry"
                     size="sm"
@@ -35,9 +35,7 @@ const State = () => {
                     Learn more <Icon />
                 </Button>
             </div>
-            <div className="relative w-full">
-                <div className="flex mx-auto container items-center w-full  gap-4">
-                    <div className="flex flex-col items-center w-full ~gap-1/16 relative ">
+            <div className="flex flex-col items-center w-full ~gap-1/16 relative pb-20">
                         <Image
                             src="/images/state-table.png"
                             width={1180}
@@ -45,8 +43,10 @@ const State = () => {
                             alt="Crypto visual"
                             className="w-full"
                         />
-                        <CryptointoSection />
                     </div>
+            <div className="relative w-full ">
+                <div className="flex mx-auto container items-center w-full  gap-4">
+                        <CryptointoSection />
                 </div>
             </div>
         </section>

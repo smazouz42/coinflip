@@ -4,14 +4,14 @@ import { Title } from "@/components/Systems/Title"
 import Image from "next/image"
 const CustomerSupport = () => {
     return (
-        <div className="container mx-auto flex w-full sm:flex-row flex-col">
-            <Image
+        <div className="container mx-auto flex w-full sm:flex-row flex-col p-20 ">
+            {/* <Image
                 src="/images/service-logo-bg.png"
                 width={670}
-                height={1143}
+                height={10}
                 alt=""
-                className="flex justify-end absolute botton-0 left-0"
-            />
+                className="flex justify-end absolute botton-0 left-0 border"
+            /> */}
             <div className="sm:w-1/2 w-full">
                 <Image src="/images/service-logo.png" width={580} height={420} alt="Crypto visual" />
             </div>

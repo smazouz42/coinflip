@@ -64,6 +64,7 @@ const About = () => {
                 width={1440}
                 height={546}
                 className="w-full absolute"
+                style={{ zIndex: -1 }}
             />
             <div className="lg:flex gap-4 w-full justify-center hidden px-4">
                 {servicesData.map((service, index) => (

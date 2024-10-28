@@ -6,7 +6,7 @@ import { Title } from "@/components/Systems/Title"
 const Homepage = () => {
   return (
     <section className="aspect-[1.82] relative w-full flex flex-col items-center ">
-      <Image src="/images/background-main.png" alt="background" width={1440} height={700} className="w-full  absolute" />
+      <Image src="/images/background-main.png" alt="background" width={1440} height={700} className="w-full  absolute"  />
       <Header />
       <div className="flex flex-col items-center justify-center ~gap-4/8 h-full container">
         <Title content="We make crypto clear and simple" size="lg" maxWidth="lg" className="text-center" />
